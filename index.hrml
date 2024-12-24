@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🕊𝐓𝐕𝐓𝐞𝐥𝐮𝐠𝐮™</title>
-  <link rel="icon" href="https://tvtelugu.github.io/images/tvtelugu.ico"/>
+    <title>Static Webpage</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         body {
@@ -23,7 +22,6 @@
         }
 
         .logo {
-            animation: float 3s ease-in-out infinite;
             width: 150px;
             height: 150px;
         }
@@ -45,25 +43,6 @@
             margin-top: 1rem;
             font-weight: 400;
             letter-spacing: 2px;
-            animation: fadeIn 2s ease-in-out;
-        }
-
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-20px);
-            }
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
         }
 
         .button {
@@ -88,28 +67,10 @@
 <body>
     <div class="container">
         <img src="https://tvtelugu.github.io/images/tvtelugu.png" alt="Logo" class="logo">
-        <div class="title">🕊𝐓𝐕𝐓𝐞𝐥𝐮𝐠𝐮™</div>
+        <div class="title">Welcome to TV Telugu</div>
         <div class="subtitle">Stay tuned for exciting content</div>
-        <div class="clock" id="clock">Loading...</div>
+        <div class="clock">12:00:00 PM</div>
         <a href="#" class="button">Learn More</a>
     </div>
-
-    <script>
-        function updateClock() {
-            const clockElement = document.getElementById('clock');
-            const now = new Date();
-            const options = {
-                hour: '2-digit',
-                minute: '2-digit',
-                second: '2-digit',
-                hour12: true,
-                timeZone: 'Asia/Kolkata'
-            };
-            clockElement.textContent = now.toLocaleTimeString('en-US', options);
-        }
-
-        setInterval(updateClock, 1000);
-        updateClock();
-    </script>
 </body>
 </html>
