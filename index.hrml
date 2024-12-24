@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🕊𝐓𝐕𝐓𝐞𝐥𝐮𝐠𝐮™</title>
+  <link rel="icon" href="https://tvtelugu.github.io/images/tvtelugu.ico"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .logo {
+            animation: float 3s ease-in-out infinite;
+            width: 150px;
+            height: 150px;
+        }
+
+        .title {
+            font-size: 2rem;
+            margin-top: 1rem;
+            font-weight: 600;
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            margin-top: 0.5rem;
+            font-weight: 300;
+        }
+
+        .clock {
+            font-size: 1.5rem;
+            margin-top: 1rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: #fff;
+            background-color: #ff7e5f;
+            border: none;
+            border-radius: 25px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #feb47b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://tvtelugu.github.io/images/tvtelugu.png" alt="Logo" class="logo">
+        <div class="title">🕊𝐓𝐕𝐓𝐞𝐥𝐮𝐠𝐮™</div>
+        <div class="subtitle">Stay tuned for exciting content</div>
+        <div class="clock" id="clock">Loading...</div>
+        <a href="#" class="button">Learn More</a>
+    </div>
+
+    <script>
+        function updateClock() {
+            const clockElement = document.getElementById('clock');
+            const now = new Date();
+            const options = {
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: true,
+                timeZone: 'Asia/Kolkata'
+            };
+            clockElement.textContent = now.toLocaleTimeString('en-US', options);
+        }
+
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+</body>
+</html>
